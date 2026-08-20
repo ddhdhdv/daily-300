@@ -1,0 +1,115 @@
+/* ============ 基础：变量 / 重置 / 主题 ============ */
+
+:root {
+  --c-primary: #4f6ef7;
+  --c-primary-deep: #3b5bdb;
+  --c-primary-weak: #eef1fe;
+  --c-bg: #f4f5fa;
+  --c-card: #ffffff;
+  --c-text: #1f2330;
+  --c-text-2: #5a6072;
+  --c-text-3: #9aa0b5;
+  --c-border: #e7e9f2;
+  --c-green: #16a34a;
+  --c-green-weak: #e3f7ec;
+  --c-orange: #d97706;
+  --c-orange-weak: #fdf1dc;
+  --c-red: #dc2626;
+  --c-red-weak: #fde8e8;
+  --c-blue: #2563eb;
+  --c-blue-weak: #e3edfd;
+  --shadow: 0 1px 2px rgba(23, 26, 43, 0.04), 0 6px 20px rgba(23, 26, 43, 0.05);
+  --radius: 18px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --tabbar-height: 62px;
+}
+
+html[data-theme='dark'] {
+  --c-primary: #6c86ff;
+  --c-primary-deep: #5470f4;
+  --c-primary-weak: #242b48;
+  --c-bg: #12141c;
+  --c-card: #1c1f2b;
+  --c-text: #e9ebf3;
+  --c-text-2: #a7adc2;
+  --c-text-3: #6b7186;
+  --c-border: #2a2e3f;
+  --c-green: #4ade80;
+  --c-green-weak: #17301f;
+  --c-orange: #fbbf24;
+  --c-orange-weak: #33270e;
+  --c-red: #f87171;
+  --c-red-weak: #391a1a;
+  --c-blue: #60a5fa;
+  --c-blue-weak: #16233c;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 6px 20px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: var(--c-bg);
+  color: var(--c-text);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  font-variant-numeric: tabular-nums;
+  transition: background 0.25s, color 0.25s;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+#app {
+  max-width: 680px;
+  margin: 0 auto;
+  min-height: 100dvh;
+}
+
+.page-container {
+  padding: 22px 16px calc(var(--tabbar-height) + var(--safe-bottom) + 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 700px) {
+  .page-container {
+    padding-top: 40px;
+  }
+}
+
+.page-loading,
+.page-error {
+  text-align: center;
+  color: var(--c-text-3);
+  padding: 60px 0;
+  font-size: 14px;
+}
+
+/* 页面通用头 */
+.page-head {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.page-head h1 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}

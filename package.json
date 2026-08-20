@@ -1,0 +1,15 @@
+{
+  "name": "daily-300-questions",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "每日300题刷题打卡 PWA（本地 IndexedDB 存储，无需服务器）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
+  }
+}
