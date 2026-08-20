@@ -9,8 +9,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  # 允许 configure-pages 自动启用 Pages（Source = GitHub Actions）
-  administration: write
 
 concurrency:
   group: pages
@@ -40,8 +38,6 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
